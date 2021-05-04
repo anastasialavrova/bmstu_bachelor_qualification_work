@@ -60,7 +60,7 @@ for tf in tf_array:
     idf = computeTFIDF(tf, idfs)
     idf_array.append(idf)
 
-idf= pd.DataFrame([idf for idf in idf_array])
+idf = pd.DataFrame([idf for idf in idf_array])
 print(idf)
 
 
