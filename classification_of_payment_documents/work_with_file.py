@@ -15,7 +15,7 @@ cnt = 0
 for i in range(2, rows + 1):
     cnt = cnt + 1;
     for j in range(1, cols + 1):
-        if (j == 5):
+        if (j == 6):
             cell = sheet.cell(row = i, column = j)
             name.append(str(cell.value))
         if (j == 7):

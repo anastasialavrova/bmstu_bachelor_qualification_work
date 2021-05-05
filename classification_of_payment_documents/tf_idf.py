@@ -50,7 +50,6 @@ def tf_idf(filtered_sentence):
     X = tfidf_transformer.fit_transform(word_count_vector)
     tf_idf = pd.DataFrame(X.toarray(), columns=cv.get_feature_names())
     print(tf_idf)
-
     return tf_idf
 
 def main():
