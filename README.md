@@ -19,3 +19,5 @@ Bachelor qualification work (2021)
 [3] https://habr.com/ru/post/101338/
 
 [4] https://monkeylearn.com/what-is-text-classification/
+
+[5] http://neerc.ifmo.ru/wiki/index.php?title=Классификация_текстов_и_анализ_тональности
