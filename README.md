@@ -17,3 +17,5 @@ Bachelor qualification work (2021)
 [2] https://www.sciencedirect.com/topics/computer-science/supervised-learning     
 
 [3] https://habr.com/ru/post/101338/
+
+[4] https://monkeylearn.com/what-is-text-classification/
