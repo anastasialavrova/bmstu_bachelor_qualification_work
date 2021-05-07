@@ -13,4 +13,7 @@ Bachelor qualification work (2021)
 --------------------------------------------------------------------------------------------------
 
 [1] https://www.ibm.com/cloud/learn/machine-learning
+
 [2] https://www.sciencedirect.com/topics/computer-science/supervised-learning     
+
+[3] https://habr.com/ru/post/101338/
