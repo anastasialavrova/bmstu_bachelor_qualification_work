@@ -8,3 +8,9 @@ Bachelor qualification work (2021)
   https://towardsdatascience.com/model-selection-in-text-classification-ac13eedf6146
   
   https://medium.com/analytics-vidhya/demonstrating-calculation-of-tf-idf-from-sklearn-4f9526e7e78b
+
+
+--------------------------------------------------------------------------------------------------
+
+[1] https://www.ibm.com/cloud/learn/machine-learning
+[2] https://www.sciencedirect.com/topics/computer-science/supervised-learning     
