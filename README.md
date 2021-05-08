@@ -25,3 +25,5 @@ Bachelor qualification work (2021)
 [6] Автоматическая обработка текстов на естественном языке и компьютерная лингвистика / Большакова Е.И., Клышинский Э.С., Ландэ Д.В., Носков А.А., Пескова О.В., Ягунова Е.В, - М.: МИЭМ, 2011
 
 (https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/)
+
+[7] книга! https://www.amazon.com/Applied-Predictive-Modeling-Max-Kuhn/dp/1461468485/ref=as_li_ss_tl?keywords=applied+predictive+modeling&qid=1568061927&s=gateway&sr=8-1&linkCode=sl1&tag=inspiredalgor-20&linkId=ff4be2af39a817cd4a78741bc87ac094&language=en_US
