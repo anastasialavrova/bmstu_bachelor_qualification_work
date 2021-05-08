@@ -7,6 +7,10 @@ from work_with_file import name, description
 from nltk.corpus import stopwords
 nltk.download('stopwords')
 
+res_X = None
+res_target_names = None
+res_target_train = None
+
 def filter():
     regular_mask = "^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1" \
                    "|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3" \
@@ -46,16 +50,39 @@ def idf_function(filtered_sentence):
 def tf_idf(filtered_sentence):
     cv = CountVectorizer()
     tfidf_transformer = TfidfTransformer()
+    print("!!!!: ", filtered_sentence)
     word_count_vector = cv.fit_transform(filtered_sentence)
     X = tfidf_transformer.fit_transform(word_count_vector)
     tf_idf = pd.DataFrame(X.toarray(), columns=cv.get_feature_names())
     print(tf_idf)
-    return tf_idf
+    return tf_idf, X
 
-def main():
-    filtered_sentence = filter()
-    result = tf_idf(filtered_sentence)
-    print(result)
+def create_target():
+    target = 1
+    target_names = []
+    target_train = []
+    for i in range(len(name)):
+        if i != 0:
+            if name[i - 1] != name[i]:
+                target = target + 1
+                target_names.append(name[i])
+            target_train.append(target)
+        else:
+            target_names.append(name[i])
+            target_train.append(target)
+    global res_target_names
+    global res_target_train
+    res_target_names = target_names
+    res_target_train = target_train
+    print(target_names)
+    print(target_train)
 
-if __name__ == "__main__":
-    main()
+
+filtered_sentence = filter()
+result, X = tf_idf(filtered_sentence)
+res_X = X
+print(result, X)
+create_target()
+
+# if __name__ == "__main__":
+#     main()
