@@ -8,6 +8,8 @@ Bachelor qualification work (2021)
   https://towardsdatascience.com/model-selection-in-text-classification-ac13eedf6146
   
   https://medium.com/analytics-vidhya/demonstrating-calculation-of-tf-idf-from-sklearn-4f9526e7e78b
+  
+  https://github.com/Raven-SL/ru-pnames-list
 
 
 --------------------------------------------------------------------------------------------------
