@@ -31,9 +31,9 @@ def main():
     stop_words = set(stopwords.words('russian'))
     docs_new = ['Оплата страхового взноса по Договору страхования № 0122130464484 от 05.09.2018, ФИО страхователя Ермошкина Екатерина Ивановна, сумма цифрами 550,00. НДС не облагается', 'Перечисление денежных средств по договору обслуживания на финансовых рынках № 1001233 от 10.04.2015г. для совершения операций с ценными бумагами на Московской бирже (субсчет']
     count_vect = CountVectorizer(stop_words=stop_words)
-    X_new_counts = count_vect.transform(docs_new)
+    X_new_counts = count_vect.fit(docs_new)
     tfidf_transformer = TfidfTransformer()
-    X_new_tfidf = tfidf_transformer.transform(X_new_counts)
+    X_new_tfidf = tfidf_transformer.fit(X_new_counts)
 
     predicted = clf.predict(X_new_tfidf)
 
