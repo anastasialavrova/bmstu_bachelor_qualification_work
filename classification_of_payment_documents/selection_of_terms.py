@@ -1,3 +1,4 @@
+import string
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
@@ -9,12 +10,13 @@ from russian_names import RussianNames
 import matplotlib.pyplot as plt
 import pandas as pd
 nltk.download('stopwords')
+import json
+import pymorphy2
 
-def filter():
+def filter(people_names):
     regular_mask_quotes = "'.*?'"
     regular_mask_another_quotes = '".*?"'
     regular_mask_company_names = '(ЗАО)? ?(ОАО)? ?(ООО)? ?(АО)? ?(ПАО)?".*?"'
-    # mask_dd_yyyy = "((0[1-9]|1[0-2]).\d{4})"
     mask_dd_yyyy = "((0[1-9]|1[0-2])(\/|\.)\d{4})"
     mask_dd_mm_yyyy = "((0[1-9]|[12]\d|3[01]).(0[1-9]|1[0-2]).[12]\d{3})"
     mask_dd_mm_yy = "((0[1-9]|[12]\d|3[01]).(0[1-9]|1[0-2]).\d{2})"
@@ -23,7 +25,10 @@ def filter():
     mask_dp = "((№?)( ?)((-?)(ДП)?( ?))\d{1,10}(-?)\d{1,10}(-?)\d{1,10}(\/?)(\d{1,10})(-?)(\d{1,10})(-?)(\d{1,10})?)"
     mask_tp_du = "((ТП)?-?(ДУ)?-([А-Я]|[а-я])?\d{1,10}(\/)?(\d{1,10})?)"
     dict = ["ЗАО", "ОАО", "ООО", "АО", "ПАО", "зао", "оао", "ооо", "ао", "пао"]
+    mask_numbers_with_slash = "(\d{1,20}/\d{1,20})"
     mask_numbers = "(\d{1,20})"
+    dict_symbols = ["№", "-", "%", "(%)", "//"]
+    mask_brackets = "(\(.*?\))"
 
     stop_words = set(stopwords.words('russian'))
     total = []
@@ -41,16 +46,24 @@ def filter():
         item = re.sub(mask_dp, '', item)
         item = re.sub(mask_tp_du, '', item)
         item = re.sub(mask_num, '', item)
+        item = re.sub(mask_numbers_with_slash, '', item)
         item = re.sub(mask_numbers, '', item)
+        # item = re.sub(mask_brackets, item[1:-1], item)
+        index_begin = str.find(item, "(")
+        index_end = str.find(item, ")")
+        item = item[0:index_begin] + item[(index_begin + 1):(index_end)] + item[(index_end + 1):-1]
         item = item.replace(".", " ")
         descriptions.append(item)
+
+    morph = pymorphy2.MorphAnalyzer()
 
     for item in descriptions:
         filtered_sentence = []
         sentence = item.split(" ")
         for word in sentence:
             word = word.lower()
-            if not word in stop_words and word != "" and not word in dict:
+            # word = morph.parse(word)[0].normal_form
+            if not word in stop_words and word != "" and not word in dict and not word in people_names and not word in dict_symbols:
                 filtered_sentence.append(word)
         total_sentence = ' '.join(filtered_sentence)
         total.append(total_sentence)
@@ -81,11 +94,38 @@ def create_set(description):
     total = list(total)
     print("Total:", total)
 
+def get_names():
+    f = open("names/female_names_rus.txt", "r")
+    f2 = open("names/male_names_rus.txt", "r")
+    f3 = open("names/male_surnames_rus.txt", "r")
+    f4 = open("names/names3.txt", "r")
+    female_names = []
+    male_names = []
+    male_surnames = []
+    names = []
+    for line in f:
+        female_names.append(line[:-1].lower())
+    for line in f2:
+        male_names.append(line[:-1].lower())
+    for line in f3:
+        male_surnames.append(line[:-1].lower())
+    for line in f4:
+        names.append(line[:-1].lower())
+    f.close()
+    res = female_names + male_names + male_surnames + names
+    # print(res)
+    return res
+
+
+
+
 def main():
-    filtered_sentence = filter()
+    people_names = get_names()
+    filtered_sentence = filter(people_names)
     set = create_set(filtered_sentence)
     r = tf_function(filtered_sentence)
     res = tf_idf(filtered_sentence)
+
 
 
 if __name__ == "__main__":
