@@ -33,3 +33,5 @@ Bachelor qualification work (2021)
 [8] https://arxiv.org/pdf/1902.06242.pdf
 
 [9] https://nlp.stanford.edu/IR-book/html/htmledition/rocchio-classification-1.html
+
+[10] https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn
