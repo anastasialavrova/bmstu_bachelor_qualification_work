@@ -35,3 +35,5 @@ Bachelor qualification work (2021)
 [9] https://nlp.stanford.edu/IR-book/html/htmledition/rocchio-classification-1.html
 
 [10] https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn
+
+[11] https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107
