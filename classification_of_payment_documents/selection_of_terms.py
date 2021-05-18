@@ -1,5 +1,8 @@
 from sklearn.feature_extraction.text import TfidfTransformer, TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 import nltk
 import re
 from work_with_file import name, description
@@ -234,6 +237,38 @@ def get_names():
     return res
 
 
+def NB(X):
+    count_vect = CountVectorizer()
+    clf = MultinomialNB().fit(X, name)
+    print(X)
+    print(name)
+    print(clf)
+    X_train, X_test, y_train, y_test = train_test_split(X, name, test_size=0.2, random_state=1)
+    print(X_train)
+    print(X_test)
+    print(y_train)
+    print(y_test)
+    # scaler = StandardScaler()
+    # scaler.fit(X_train)
+    # X_train = scaler.transform(X_train)
+    # X_test = scaler.transform(X_test)
+    clf = MultinomialNB()
+    clf.fit(X_train, y_train)
+    predicted = clf.predict(X_test)
+    print("TEST: ")
+    print(predicted)
+    print(y_test)
+    print(len(predicted))
+    print(len(y_test))
+    cnt = 0
+    for i in range(len(predicted)):
+        print(i,": ", predicted[i], " ", y_test[i], "\n")
+        if (predicted[i] != y_test[i]):
+            cnt += 1
+    print (cnt)
+
+
+
 def main():
     people_names = get_names()
     filtered_sentence = filter(people_names)
@@ -259,6 +294,9 @@ def main():
     for w in sorted_keys:
         sorted_dict[w]=tfidf_scores[w]
     print(sorted_dict)
+
+    NB(res)
+
 
 
 
