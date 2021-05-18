@@ -31,3 +31,9 @@ Bachelor qualification work (2021)
 [7] книга! https://www.amazon.com/Applied-Predictive-Modeling-Max-Kuhn/dp/1461468485/ref=as_li_ss_tl?keywords=applied+predictive+modeling&qid=1568061927&s=gateway&sr=8-1&linkCode=sl1&tag=inspiredalgor-20&linkId=ff4be2af39a817cd4a78741bc87ac094&language=en_US
 
 [8] https://arxiv.org/pdf/1902.06242.pdf
+
+[9] https://nlp.stanford.edu/IR-book/html/htmledition/rocchio-classification-1.html
+
+[10] https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn
+
+[11] https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107
