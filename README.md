@@ -14,6 +14,10 @@ Bachelor qualification work (2021)
   https://www.sklearn.org/auto_examples/applications/plot_out_of_core_classification.html#sphx-glr-auto-examples-applications-plot-out-of-core-classification-py
   
   https://timofey.pro/Ng
+  
+  https://towardsdatascience.com/introduction-to-linear-regression-and-polynomial-regression-f8adc96f31cb
+  
+  https://towardsdatascience.com/introduction-to-logistic-regression-66248243c148
 
 
 --------------------------------------------------------------------------------------------------
