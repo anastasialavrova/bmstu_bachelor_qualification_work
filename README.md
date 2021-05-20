@@ -12,6 +12,8 @@ Bachelor qualification work (2021)
   https://github.com/Raven-SL/ru-pnames-list
   
   https://www.sklearn.org/auto_examples/applications/plot_out_of_core_classification.html#sphx-glr-auto-examples-applications-plot-out-of-core-classification-py
+  
+  https://timofey.pro/Ng
 
 
 --------------------------------------------------------------------------------------------------
