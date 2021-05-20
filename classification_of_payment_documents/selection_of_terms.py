@@ -1,13 +1,7 @@
-from sklearn.feature_extraction.text import TfidfTransformer, TfidfVectorizer
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
 import nltk
 import re
-from work_with_file import name, description
+from work_with_file import *
 from nltk.corpus import stopwords
-import pandas as pd
 nltk.download('stopwords')
 import pymorphy2
 
@@ -77,10 +71,11 @@ def filter_with_numbers(word):
 
 def word_in_stop_words(word, company_names, people_names):
     stop_words = set(stopwords.words('russian'))
-    dict = ["ЗАО", "ОАО", "ООО", "АО", "ПАО", "зао", "оао", "ооо", "ао", "пао"]
+    dict = ["ЗАО", "ОАО", "ООО", "АО", "ПАО", "зао", "оао", "ооо", "ао", "пао", "г"]
     dict_symbols = ["№", "-", "%", "(%)", "//"]
 
-    if not word in stop_words and word != "" and not word in dict and not word in people_names and not word in dict_symbols \
+    if not word in stop_words and word != "" and not word in dict \
+            and not word in people_names and not word in dict_symbols \
             and not word in company_names and filter_with_numbers(word):
         return True
     else:
@@ -184,122 +179,13 @@ def filter_with_stop_words(descriptions, company_names, people_names):
                 filtered_sentence.append(word)
         total_sentence = ' '.join(filtered_sentence)
         total.append(total_sentence)
-        print(total_sentence)
-    print(total)
+        #print(total_sentence)
+    # print(total)
     return total
 
 
-def filter(people_names):
+def filter(description):
+    people_names = get_names()
     descriptions, company_names = filter_with_masks(description)
     result = filter_with_stop_words(descriptions, company_names, people_names)
     return result
-
-
-def tf_idf(filtered_sentence):
-    cv = CountVectorizer()
-    tfidf_transformer = TfidfTransformer()
-    word_count_vector = cv.fit_transform(filtered_sentence)
-    X = tfidf_transformer.fit_transform(word_count_vector)
-    feature_names = cv.get_feature_names()
-    print("Feature names: ", feature_names)
-    tf_idf = pd.DataFrame(X.toarray(), columns=cv.get_feature_names())
-    print(tf_idf)
-    # print(X)
-    return X, feature_names
-
-def create_set(description):
-    total = {}
-    for item in description:
-        doc = item.split(" ")
-        total = set(total).union(set(doc))
-    total = list(total)
-    print("Total:", total)
-
-def get_names():
-    f = open("names/female_names_rus.txt", "r")
-    f2 = open("names/male_names_rus.txt", "r")
-    f3 = open("names/male_surnames_rus.txt", "r")
-    f4 = open("names/names3.txt", "r")
-    female_names = []
-    male_names = []
-    male_surnames = []
-    names = []
-    for line in f:
-        female_names.append(line[:-1].lower())
-    for line in f2:
-        male_names.append(line[:-1].lower())
-    for line in f3:
-        male_surnames.append(line[:-1].lower())
-    for line in f4:
-        names.append(line[:-1].lower())
-    f.close()
-    res = female_names + male_names + male_surnames + names
-    return res
-
-
-def NB(X):
-    count_vect = CountVectorizer()
-    clf = MultinomialNB().fit(X, name)
-    print(X)
-    print(name)
-    print(clf)
-    X_train, X_test, y_train, y_test = train_test_split(X, name, test_size=0.2, random_state=1)
-    print(X_train)
-    print(X_test)
-    print(y_train)
-    print(y_test)
-    # scaler = StandardScaler()
-    # scaler.fit(X_train)
-    # X_train = scaler.transform(X_train)
-    # X_test = scaler.transform(X_test)
-    clf = MultinomialNB()
-    clf.fit(X_train, y_train)
-    predicted = clf.predict(X_test)
-    print("TEST: ")
-    print(predicted)
-    print(y_test)
-    print(len(predicted))
-    print(len(y_test))
-    cnt = 0
-    for i in range(len(predicted)):
-        print(i,": ", predicted[i], " ", y_test[i], "\n")
-        if (predicted[i] != y_test[i]):
-            cnt += 1
-    print (cnt)
-
-
-
-def main():
-    people_names = get_names()
-    filtered_sentence = filter(people_names)
-    set = create_set(filtered_sentence)
-    res, feature_names  = tf_idf(filtered_sentence)
-
-    sum_col = res.sum(axis=0).tolist()
-    cnt_elem = res.getnnz(axis=0).tolist()
-    print(sum_col)
-    print(cnt_elem)
-
-    lst = []
-
-    for i in range(len(cnt_elem)):
-        lst.append(sum_col[0][i]/cnt_elem[i])
-
-    tfidf_scores = dict(zip([feature_names[i] for i in range (len(feature_names))], [lst[i] for i in range(len(lst))]))
-    print("FINAL: ", tfidf_scores)
-
-    sorted_dict = {}
-    sorted_keys = sorted(tfidf_scores, key=tfidf_scores.get)
-
-    for w in sorted_keys:
-        sorted_dict[w]=tfidf_scores[w]
-    print(sorted_dict)
-
-    NB(res)
-
-
-
-
-
-if __name__ == "__main__":
-    main()
