@@ -10,6 +10,8 @@ Bachelor qualification work (2021)
   https://medium.com/analytics-vidhya/demonstrating-calculation-of-tf-idf-from-sklearn-4f9526e7e78b
   
   https://github.com/Raven-SL/ru-pnames-list
+  
+  https://www.sklearn.org/auto_examples/applications/plot_out_of_core_classification.html#sphx-glr-auto-examples-applications-plot-out-of-core-classification-py
 
 
 --------------------------------------------------------------------------------------------------
