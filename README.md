@@ -20,6 +20,8 @@ Bachelor qualification work (2021)
   https://towardsdatascience.com/introduction-to-logistic-regression-66248243c148
   
   https://github.com/perborgen/LogisticRegression/blob/780e03825bf557f455ba094839b5485b492c9204/logistic.py#L127
+  
+  https://vc.ru/dev/72964-obuchenie-logisticheskoy-regressii
 
 
 --------------------------------------------------------------------------------------------------
