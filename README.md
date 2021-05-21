@@ -28,6 +28,8 @@ Bachelor qualification work (2021)
   https://nlp.stanford.edu/IR-book/html/htmledition/naive-bayes-text-classification-1.html
   
   http://www.machinelearning.ru/wiki/images/7/79/Biomed_engin_2020_mdv_pres.pdf
+  
+  http://bazhenov.me/blog/2012/07/21/classification-performance-evaluation.html
 
 
 --------------------------------------------------------------------------------------------------
