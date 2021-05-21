@@ -55,3 +55,5 @@ Bachelor qualification work (2021)
 [10] https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn
 
 [11] https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107
+
+[12] https://neerc.ifmo.ru/wiki/index.php?title=Оценка_качества_в_задачах_классификации_и_регрессии#.D0.90.D0.BA.D0.BA.D1.83.D1.80.D0.B0.D1.82.D0.BD.D0.BE.D1.81.D1.82.D1.8C_.28.D0.B0.D0.BD.D0.B3.D0.BB._Accuracy.29
