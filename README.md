@@ -24,6 +24,8 @@ Bachelor qualification work (2021)
   https://vc.ru/dev/72964-obuchenie-logisticheskoy-regressii
   
   https://stackoverflow.com/questions/54238493/what-is-the-search-prediction-time-complexity-of-logistic-regression
+  
+  https://nlp.stanford.edu/IR-book/html/htmledition/naive-bayes-text-classification-1.html
 
 
 --------------------------------------------------------------------------------------------------
