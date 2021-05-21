@@ -26,6 +26,8 @@ Bachelor qualification work (2021)
   https://stackoverflow.com/questions/54238493/what-is-the-search-prediction-time-complexity-of-logistic-regression
   
   https://nlp.stanford.edu/IR-book/html/htmledition/naive-bayes-text-classification-1.html
+  
+  http://www.machinelearning.ru/wiki/images/7/79/Biomed_engin_2020_mdv_pres.pdf
 
 
 --------------------------------------------------------------------------------------------------
