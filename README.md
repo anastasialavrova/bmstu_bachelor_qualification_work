@@ -30,6 +30,8 @@ Bachelor qualification work (2021)
   http://www.machinelearning.ru/wiki/images/7/79/Biomed_engin_2020_mdv_pres.pdf
   
   http://bazhenov.me/blog/2012/07/21/classification-performance-evaluation.html
+  
+  https://www.mariakhalusova.com/posts/2019-04-17-ml-model-evaluation-metrics-p2/
 
 
 --------------------------------------------------------------------------------------------------
