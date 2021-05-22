@@ -10,6 +10,28 @@ Bachelor qualification work (2021)
   https://medium.com/analytics-vidhya/demonstrating-calculation-of-tf-idf-from-sklearn-4f9526e7e78b
   
   https://github.com/Raven-SL/ru-pnames-list
+  
+  https://www.sklearn.org/auto_examples/applications/plot_out_of_core_classification.html#sphx-glr-auto-examples-applications-plot-out-of-core-classification-py
+  
+  https://timofey.pro/Ng
+  
+  https://towardsdatascience.com/introduction-to-linear-regression-and-polynomial-regression-f8adc96f31cb
+  
+  https://towardsdatascience.com/introduction-to-logistic-regression-66248243c148
+  
+  https://github.com/perborgen/LogisticRegression/blob/780e03825bf557f455ba094839b5485b492c9204/logistic.py#L127
+  
+  https://vc.ru/dev/72964-obuchenie-logisticheskoy-regressii
+  
+  https://stackoverflow.com/questions/54238493/what-is-the-search-prediction-time-complexity-of-logistic-regression
+  
+  https://nlp.stanford.edu/IR-book/html/htmledition/naive-bayes-text-classification-1.html
+  
+  http://www.machinelearning.ru/wiki/images/7/79/Biomed_engin_2020_mdv_pres.pdf
+  
+  http://bazhenov.me/blog/2012/07/21/classification-performance-evaluation.html
+  
+  https://www.mariakhalusova.com/posts/2019-04-17-ml-model-evaluation-metrics-p2/
 
 
 --------------------------------------------------------------------------------------------------
@@ -37,3 +59,5 @@ Bachelor qualification work (2021)
 [10] https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn
 
 [11] https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107
+
+[12] https://neerc.ifmo.ru/wiki/index.php?title=Оценка_качества_в_задачах_классификации_и_регрессии#.D0.90.D0.BA.D0.BA.D1.83.D1.80.D0.B0.D1.82.D0.BD.D0.BE.D1.81.D1.82.D1.8C_.28.D0.B0.D0.BD.D0.B3.D0.BB._Accuracy.29
