@@ -2,7 +2,7 @@ import openpyxl
 
 
 def read_data():
-    wb = openpyxl.load_workbook('example_table.xlsx')
+    wb = openpyxl.load_workbook('data/table.xlsx')
 
     sheet = wb.active
     rows = sheet.max_row

@@ -179,8 +179,6 @@ def filter_with_stop_words(descriptions, company_names, people_names):
                 filtered_sentence.append(word)
         total_sentence = ' '.join(filtered_sentence)
         total.append(total_sentence)
-        #print(total_sentence)
-    # print(total)
     return total
 
 
