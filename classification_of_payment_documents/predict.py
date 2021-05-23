@@ -1,11 +1,15 @@
 from scipy import sparse
 import numpy as numpy
 import json
+from sklearn.preprocessing import StandardScaler
 
 def predict(clf, sentence):
+    scaler = StandardScaler(with_mean=False)
+    scaler.fit(sentence)
+    sentence = scaler.transform(sentence)
 
     new_sentence = sentence.data.tolist()
-    while(len(new_sentence) < 6883):
+    while(len(new_sentence) < 6883): #6883 #231
         new_sentence.append(0)
     arr = numpy.array(new_sentence)
     new_sentence = sparse.csr_matrix(arr)
