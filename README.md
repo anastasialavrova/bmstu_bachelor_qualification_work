@@ -32,6 +32,8 @@ Bachelor qualification work (2021)
   http://bazhenov.me/blog/2012/07/21/classification-performance-evaluation.html
   
   https://www.mariakhalusova.com/posts/2019-04-17-ml-model-evaluation-metrics-p2/
+  
+  https://hub.packtpub.com/implementing-3-naive-bayes-classifiers-in-scikit-learn/
 
 
 --------------------------------------------------------------------------------------------------
