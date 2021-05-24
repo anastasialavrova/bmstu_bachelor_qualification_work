@@ -36,6 +36,8 @@ Bachelor qualification work (2021)
   https://hub.packtpub.com/implementing-3-naive-bayes-classifiers-in-scikit-learn/
   
   http://www.machinelearning.ru/wiki/images/e/ed/Voron-ML-Bayes.pdf
+  
+  http://www2.aueb.gr/users/ion/docs/ceas2006_paper.pdf
 
 
 --------------------------------------------------------------------------------------------------
