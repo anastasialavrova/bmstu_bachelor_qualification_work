@@ -30,7 +30,7 @@ def predict(clf, sentence):
     print(name)
 
 
-    sorted_values = sorted(dictionary.values())  # Sort the values
+    sorted_values = reversed(sorted(dictionary.values()))  # Sort the values
     sort_dictionary = {}
 
     for i in sorted_values:

@@ -42,5 +42,8 @@ def get_names():
     for line in f4:
         names.append(line[:-1].lower())
     f.close()
+    f2.close()
+    f3.close()
+    f4.close()
     res = female_names + male_names + male_surnames + names
     return res

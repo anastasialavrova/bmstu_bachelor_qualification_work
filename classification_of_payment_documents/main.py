@@ -9,27 +9,27 @@ from save_classificator import *
 from predict import *
 
 
-def main():
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    return app.exec()
-
-
-if __name__ == '__main__':
-    sys.exit(main())
-
-# name, description = read_data()
-# filtered_sentence = filter(description)
-# res = tf_idf(filtered_sentence)
-# clf_NB = NB(res, name)
-# # clf_lr = logistic_regression(res, name)
-# name_file = "clf_NB.pkl"
-# save_clf(clf_NB, name_file)
+# def main():
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.show()
+#     return app.exec()
 #
-# clf = load_clf(name_file)
-# filtered_example = filter(['Программа для ЭВМ "Корпоративная система электронного документооборота DIRECTUM", в рамках технического решения "Обработка обращений клиентов" , дог. N 003/19 от 05.09.19г, счет N 0275/У от 27.04.20г.'])
-# res_example = tf_idf(filtered_example)
-# predicted, name, dictionary = predict(clf, res_example)
+#
+# if __name__ == '__main__':
+#     sys.exit(main())
+
+name, description = read_data()
+filtered_sentence = filter(description)
+res = tf_idf(filtered_sentence)
+clf_NB = NB(res, name)
+# clf_lr = logistic_regression(res, name)
+name_file = "clf_NB.pkl"
+save_clf(clf_NB, name_file)
+
+clf = load_clf(name_file)
+filtered_example = filter(['Программа для ЭВМ "Корпоративная система электронного документооборота DIRECTUM", в рамках технического решения "Обработка обращений клиентов" , дог. N 003/19 от 05.09.19г, счет N 0275/У от 27.04.20г.'])
+res_example = tf_idf(filtered_example)
+predicted, name, dictionary = predict(clf, res_example)
 
 
