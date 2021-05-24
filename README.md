@@ -34,6 +34,8 @@ Bachelor qualification work (2021)
   https://www.mariakhalusova.com/posts/2019-04-17-ml-model-evaluation-metrics-p2/
   
   https://hub.packtpub.com/implementing-3-naive-bayes-classifiers-in-scikit-learn/
+  
+  http://www.machinelearning.ru/wiki/images/e/ed/Voron-ML-Bayes.pdf
 
 
 --------------------------------------------------------------------------------------------------
