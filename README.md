@@ -38,6 +38,8 @@ Bachelor qualification work (2021)
   http://www.machinelearning.ru/wiki/images/e/ed/Voron-ML-Bayes.pdf
   
   http://www2.aueb.gr/users/ion/docs/ceas2006_paper.pdf
+  
+  https://stackoverflow.com/questions/38640109/logistic-regression-python-solvers-defintions/52388406#52388406
 
 
 --------------------------------------------------------------------------------------------------
