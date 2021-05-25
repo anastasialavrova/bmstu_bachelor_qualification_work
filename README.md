@@ -39,6 +39,8 @@ Bachelor qualification work (2021)
   
   http://www2.aueb.gr/users/ion/docs/ceas2006_paper.pdf
   
+  https://stackoverflow.com/questions/62658215/convergencewarning-lbfgs-failed-to-converge-status-1-stop-total-no-of-iter
+  
   https://stackoverflow.com/questions/38640109/logistic-regression-python-solvers-defintions/52388406#52388406
 
 
