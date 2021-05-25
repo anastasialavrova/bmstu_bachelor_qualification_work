@@ -42,6 +42,8 @@ Bachelor qualification work (2021)
   https://stackoverflow.com/questions/62658215/convergencewarning-lbfgs-failed-to-converge-status-1-stop-total-no-of-iter
   
   https://stackoverflow.com/questions/38640109/logistic-regression-python-solvers-defintions/52388406#52388406
+  
+  http://www.machinelearning.ru/wiki/images/0/02/Romanenko2012bach.pdf
 
 
 --------------------------------------------------------------------------------------------------
