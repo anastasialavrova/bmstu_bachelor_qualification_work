@@ -1,3 +1,222 @@
 [nltk_data] Downloading package stopwords to
 [nltk_data]     /Users/anastasialavrova/nltk_data...
 [nltk_data]   Package stopwords is already up-to-date!
+              precision    recall  f1-score   support
+
+         100       0.79      0.95      0.86        20
+        1016       0.92      0.86      0.89        14
+        1017       0.84      0.59      0.69       113
+        1018       0.72      0.83      0.77       117
+        1019       0.46      0.81      0.58       262
+        1020       0.29      1.00      0.44        10
+        1021       0.67      0.50      0.57       204
+        1024       1.00      0.29      0.44         7
+        1027       0.75      0.65      0.69       601
+        1028       0.50      0.53      0.51        19
+        1029       0.00      0.00      0.00         0
+         103       0.50      0.21      0.30       118
+        1036       0.52      0.86      0.65        14
+        1037       0.60      0.83      0.70        18
+        1040       0.67      0.57      0.62        49
+        1082       0.81      0.97      0.88        99
+        1087       0.86      0.71      0.78       404
+        1089       0.92      1.00      0.96        24
+        1090       0.00      0.00      0.00         1
+        1103       0.00      0.00      0.00         1
+        1126       0.50      0.50      0.50         2
+        1129       0.83      0.99      0.90        90
+        1130       0.77      0.96      0.85       105
+        1171       0.82      0.82      0.82        17
+        1172       0.00      0.00      0.00         1
+        1173       0.12      0.33      0.17         9
+        1174       0.00      0.00      0.00         0
+        1175       0.57      0.84      0.68        32
+        1176       0.50      0.42      0.45        12
+        1177       0.00      0.00      0.00         3
+        1178       0.00      0.00      0.00         1
+        1180       0.00      0.00      0.00         7
+        1181       0.18      0.40      0.25         5
+        1187       1.00      0.33      0.50         6
+        1188       0.00      0.00      0.00         0
+        1200       0.00      0.00      0.00         4
+        1220       0.37      0.68      0.48        44
+        1225       1.00      0.85      0.92        13
+        1227       0.97      0.54      0.69        65
+        1228       0.47      0.67      0.55        24
+          13       0.76      0.57      0.65        51
+        1359       0.00      0.00      0.00         0
+        1381       1.00      0.25      0.40         4
+          14       0.97      1.00      0.98        56
+        1541       0.83      0.89      0.86       102
+        1558       0.00      0.00      0.00         4
+        1568       0.00      0.00      0.00         2
+        1571       0.50      1.00      0.67         1
+        1573       0.56      0.64      0.60        14
+        1576       0.67      0.60      0.63        10
+        1610       1.00      0.60      0.75        15
+        1611       0.82      0.93      0.87        29
+        1612       0.50      1.00      0.67         2
+        1613       0.79      0.83      0.81        18
+        1614       1.00      0.77      0.87        13
+        1615       1.00      0.82      0.90        28
+        1617       0.00      0.00      0.00         1
+        1618       0.60      0.78      0.68        41
+        1619       0.67      0.93      0.78        42
+        1620       0.00      0.00      0.00         7
+        1621       0.50      0.33      0.40         3
+        1622       0.28      0.42      0.33        12
+        1624       0.85      0.96      0.90        23
+        1626       0.00      0.00      0.00         2
+        1627       0.86      0.60      0.71        95
+          17       0.80      0.62      0.70        52
+        1798       0.00      0.00      0.00         1
+        1799       0.00      0.00      0.00         1
+          18       0.53      0.69      0.60        35
+        1800       0.98      0.91      0.94      5843
+        1801       0.99      0.91      0.95      8856
+        1804       0.00      0.00      0.00         1
+        1806       0.00      0.00      0.00         2
+        1808       0.00      0.00      0.00         0
+        1809       0.57      0.93      0.70        14
+        1810       0.00      0.00      0.00         0
+        1811       0.00      0.00      0.00         5
+        1812       0.00      0.00      0.00         4
+        1814       0.00      0.00      0.00         4
+        1816       0.18      1.00      0.31         2
+        1817       0.20      1.00      0.33         1
+        1819       0.00      0.00      0.00         0
+         182       1.00      1.00      1.00         4
+        1821       0.00      0.00      0.00         4
+        1824       0.41      0.45      0.43        20
+        1825       0.34      0.75      0.47        16
+        1826       0.18      0.07      0.10       122
+         183       0.75      0.75      0.75         8
+        1831       0.00      0.00      0.00         4
+        1849       0.00      0.00      0.00         0
+        1850       0.00      0.00      0.00         1
+        1873       0.00      0.00      0.00         1
+        1888       0.29      0.50      0.36        16
+          19       1.00      0.79      0.88        14
+        1919       0.42      0.83      0.56         6
+        1959       1.00      1.00      1.00         4
+        1960       0.38      0.75      0.50         4
+        1962       0.43      0.60      0.50         5
+        1966       0.85      0.65      0.73        34
+        1967       0.00      0.00      0.00         2
+        1970       0.32      0.90      0.47        20
+        1976       0.70      0.76      0.73        37
+        1979       0.70      1.00      0.83        19
+        1997       0.66      0.95      0.78        22
+          20       1.00      1.00      1.00        12
+        2010       1.00      1.00      1.00         1
+        2017       0.27      1.00      0.43        16
+        2028       1.00      1.00      1.00         1
+        2043       0.00      0.00      0.00         2
+        2056       0.00      0.00      0.00         0
+        2057       0.00      0.00      0.00         0
+        2064       0.61      0.64      0.62       107
+        2072       0.00      0.00      0.00        28
+        2078       0.50      0.70      0.58        10
+        2093       0.86      1.00      0.92         6
+        2098       0.00      0.00      0.00         5
+        2108       0.43      0.21      0.29        70
+        2114       0.64      1.00      0.78        30
+        2117       0.86      0.75      0.80        32
+        2126       0.50      1.00      0.67         2
+          22       0.37      1.00      0.54        19
+        2214       0.75      0.33      0.46        18
+        2215       0.00      0.00      0.00         1
+        2217       0.35      1.00      0.52        12
+        2235       0.00      0.00      0.00         9
+        2270       0.00      0.00      0.00         0
+        2286       0.33      0.50      0.40         4
+        2295       0.04      0.84      0.08        19
+          23       0.79      0.96      0.87        27
+        2302       0.23      0.60      0.33         5
+        2317       0.33      0.11      0.17         9
+        2322       0.00      0.00      0.00         1
+        2323       0.20      1.00      0.33         1
+        2325       0.58      0.35      0.44        20
+        2372       0.00      0.00      0.00         0
+        2413       0.00      0.00      0.00         2
+         256       0.32      0.79      0.46        29
+         257       0.81      0.85      0.83        46
+         258       0.67      0.21      0.32        28
+         259       0.92      0.85      0.89        41
+         272       0.89      0.92      0.91       505
+         273       0.95      0.92      0.94       205
+         306       0.33      0.92      0.49        13
+         308       0.71      0.50      0.59       149
+         310       0.60      0.15      0.24        40
+         312       0.69      0.39      0.50        23
+         313       0.34      0.96      0.50        25
+         314       0.67      0.43      0.52        28
+         315       0.62      0.45      0.53        11
+         319       0.00      0.00      0.00         1
+         320       0.33      0.87      0.47        15
+         323       0.58      0.63      0.60        35
+         324       0.44      0.44      0.44        32
+         325       0.27      0.40      0.32        10
+          33       0.00      0.00      0.00         0
+         331       0.47      0.70      0.56       135
+         332       0.79      0.80      0.80       281
+         333       0.57      0.87      0.69       335
+         334       0.40      1.00      0.57         2
+         335       0.56      0.96      0.71       254
+          34       0.10      0.67      0.17         3
+          36       0.20      0.50      0.29         4
+         407       0.45      0.82      0.58        11
+          41       0.00      0.00      0.00         0
+         413       0.73      0.96      0.83        23
+          43       1.00      0.33      0.50         3
+         468       0.78      0.12      0.21        57
+         469       0.54      0.83      0.66        77
+         471       0.00      0.00      0.00         0
+         472       0.52      0.87      0.65       124
+         473       0.61      0.74      0.67        58
+         474       0.50      0.67      0.57         3
+         475       0.22      1.00      0.36         2
+         476       1.00      0.33      0.50         3
+         477       0.67      0.22      0.33         9
+         487       0.00      0.00      0.00         0
+         489       0.00      0.00      0.00         4
+         490       0.00      0.00      0.00         1
+         499       0.00      0.00      0.00         6
+         521       0.41      0.93      0.57        69
+         528       0.78      0.96      0.86       101
+         531       0.84      0.72      0.78       300
+          58       1.00      0.05      0.10        19
+         615       0.00      0.00      0.00         9
+         630       0.00      0.00      0.00         1
+          82       0.11      1.00      0.19         2
+          83       0.30      0.75      0.43         4
+          89       0.00      0.00      0.00         2
+          90       0.80      0.38      0.52        42
+          99       0.54      0.90      0.67        31
+         995       1.00      1.00      1.00         1
+         996       0.50      1.00      0.67         1
+
+    accuracy                           0.85     21976
+   macro avg       0.45      0.52      0.44     21976
+weighted avg       0.88      0.85      0.86     21976
+
+Traceback (most recent call last):
+  File "/Users/anastasialavrova/bmstu_bachelor_qualification_work/classification_of_payment_documents/main.py", line 33, in <module>
+    predicted, name, dictionary = predict(clf_model, res_example)
+  File "/Users/anastasialavrova/bmstu_bachelor_qualification_work/classification_of_payment_documents/predict.py", line 17, in predict
+    predicted_proba = clf.predict_proba(new_sentence)
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/sklearn/naive_bayes.py", line 115, in predict_proba
+    return np.exp(self.predict_log_proba(X))
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/sklearn/naive_bayes.py", line 95, in predict_log_proba
+    jll = self._joint_log_likelihood(X)
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/sklearn/naive_bayes.py", line 785, in _joint_log_likelihood
+    return (safe_sparse_dot(X, self.feature_log_prob_.T) +
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/sklearn/utils/validation.py", line 63, in inner_f
+    return f(*args, **kwargs)
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/sklearn/utils/extmath.py", line 152, in safe_sparse_dot
+    ret = a @ b
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/scipy/sparse/base.py", line 560, in __matmul__
+    return self.__mul__(other)
+  File "/Users/anastasialavrova/diplom/bmstu_bachelor_qualification_work/classification_of_payment_documents/venv/lib/python3.8/site-packages/scipy/sparse/base.py", line 516, in __mul__
+    raise ValueError('dimension mismatch')
+ValueError: dimension mismatch

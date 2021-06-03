@@ -19,6 +19,7 @@ def filter_with_masks(description):
     descriptions = []
     company_names = []
 
+
     for item in description:
         # приведение к нижнему регистру
         item = item.lower()

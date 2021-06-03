@@ -4,7 +4,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 import warnings
 from sklearn.preprocessing import StandardScaler
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 def NB(X, name):
     warnings.filterwarnings('ignore')
@@ -15,11 +16,16 @@ def NB(X, name):
     X_train = scaler.transform(X_train)
     X_test = scaler.transform(X_test)
 
+
     clf = MultinomialNB()
     clf.fit(X_train, y_train)
     predicted = clf.predict(X_test)
     print(metrics.classification_report(y_test, predicted))
-    return clf
+
+    metr = metrics.classification_report(y_test, predicted, output_dict=True)
+    res = metr['weighted avg']['f1-score']
+
+    return clf, res
 
 def logistic_regression(X, name):
     warnings.filterwarnings('ignore')
@@ -30,9 +36,14 @@ def logistic_regression(X, name):
     X_train = scaler.transform(X_train)
     X_test = scaler.transform(X_test)
 
+
     clf = LogisticRegression()
     clf.fit(X_train, y_train)
-
     predicted = clf.predict(X_test)
     print(metrics.classification_report(y_test, predicted))
-    return clf
+
+    metr = metrics.classification_report(y_test, predicted, output_dict=True)
+    res = metr['weighted avg']['f1-score']
+
+    return clf, res
+

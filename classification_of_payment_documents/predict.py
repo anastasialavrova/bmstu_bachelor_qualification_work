@@ -9,7 +9,7 @@ def predict(clf, sentence):
     sentence = scaler.transform(sentence)
 
     new_sentence = sentence.data.tolist()
-    while(len(new_sentence) < 6883): #6883 #231
+    while(len(new_sentence) < 6875): #6883 #231 #6875
         new_sentence.append(0)
     arr = numpy.array(new_sentence)
     new_sentence = sparse.csr_matrix(arr)
@@ -18,19 +18,15 @@ def predict(clf, sentence):
     predicted = clf.predict(new_sentence)
 
     dictionary = dict(zip(clf.classes_, predicted_proba[0]))
-    print(dictionary)
     predicted = str(predicted[0])
-    print(predicted)
-    print(type(predicted))
 
     with open('data/name_of_code.txt') as json_file:
         data = json.load(json_file)
 
     name = data.get(predicted)
-    print(name)
 
 
-    sorted_values = reversed(sorted(dictionary.values()))  # Sort the values
+    sorted_values = reversed(sorted(dictionary.values()))
     sort_dictionary = {}
 
     for i in sorted_values:
@@ -39,6 +35,6 @@ def predict(clf, sentence):
                 sort_dictionary[k] = dictionary[k]
                 break
 
-    print(sort_dictionary)
+    res = sort_dictionary
 
-    return predicted, name, sort_dictionary
+    return predicted, name, res

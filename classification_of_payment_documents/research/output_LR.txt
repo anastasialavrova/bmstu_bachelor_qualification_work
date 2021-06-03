@@ -1,6 +1,4 @@
-[nltk_data] Downloading package stopwords to
-[nltk_data]     /Users/anastasialavrova/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+
               precision    recall  f1-score   support
 
          100       1.00      1.00      1.00        30

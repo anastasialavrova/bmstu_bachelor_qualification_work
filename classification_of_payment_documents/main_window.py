@@ -1,6 +1,6 @@
-from PyQt5 import uic, QtCore
+from PyQt5 import uic, QtCore, QtWidgets
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit, QComboBox, QLabel, QSpinBox, QPushButton
+from PyQt5.QtWidgets import QMainWindow, QApplication, QLineEdit, QComboBox, QLabel, QSpinBox, QPushButton, QMessageBox
 from save_classificator import *
 from predict import *
 from fit_classificator import *
@@ -27,24 +27,32 @@ class MainWindow(QMainWindow):
 
     @pyqtSlot(name='on_pushButton_clicked')
     def find_result(self):
+        self.dictionary = None
         text = self.input_text.text()
-        print(text)
         clafficator = self.select_classificator.currentText()
         if (clafficator == "Наивный Байесовский классификатор"):
-            name_file = "clf_NB.pkl"
+            name_file = "clf_NB2.pkl"
         else:
-            name_file = "clf_LR.pkl"
+            name_file = "clf_LR2.pkl"
 
-        try:
-            clf = load_clf(name_file)
-            filtered_example = filter(list(text))
-            res_example = tf_idf(filtered_example)
-            predicted, name, dictionary = predict(clf, res_example)
-            self.dictionary = dictionary
+        clf = load_clf(name_file)
+        description = []
+        description.append(text)
+        print(description)
+        filtered_example = filter(description)
+        print(filtered_example)
+        res_example = tf_idf(filtered_example)
+        predicted, name, dictionary = predict(clf, res_example)
+        self.dictionary = dictionary
+        print("dict: ", self.dictionary)
 
+        print(dictionary[predicted] < 0.5)
+        if (float(dictionary[predicted]) < 0.3):
             self.show_result.setText(predicted + " " + name)
-        except:
-            self.show_result.setText("Введите корректные данные")
+            QMessageBox.about(self, "Error!", "Недостаточная точность!")
+
+        else:
+            self.show_result.setText(predicted + " " + name)
 
     @pyqtSlot(name='on_pushButton_2_clicked')
     def show_table(self):
